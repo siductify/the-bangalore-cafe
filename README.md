@@ -2,7 +2,7 @@
 
 A minimal, interactive landing page for **The Bangalore Cafe**, a pure-vegetarian restaurant in Shanti Nagar, Bengaluru.
 
-**Live site:** `https://<username>.github.io/<repo>/` *(updated automatically by GitHub Pages)*
+**Live site:** `https://siductify.github.io/the-bangalore-cafe/` *(updated automatically by GitHub Pages)*
 
 ---
 
