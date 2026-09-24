@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Bangalore Cafe — Pure Veg · Shanti Nagar, Bengaluru</title>
+<meta name="description" content="The Bangalore Cafe — a relaxed, pure-vegetarian restaurant in Shanti Nagar, Bengaluru. South Indian, North Indian, Chinese, Mexican & Italian. Open daily till 1 am.">
+<meta name="theme-color" content="#FAF6EE">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23221A12'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='30' fill='%23E58B5F' text-anchor='middle'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "The Bangalore Cafe",
+  "telephone": "+919535964043",
+  "priceRange": "₹400–₹1,400",
+  "servesCuisine": ["South Indian","North Indian","Chinese","Mexican","Italian","Continental","Desserts"],
+  "acceptsReservations": "True",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "4, Kengal Hanumanthaiah Road, Bheemanna Garden, Shanti Nagar",
+    "addressLocality": "Bengaluru",
+    "addressRegion": "Karnataka",
+    "postalCode": "560027",
+    "addressCountry": "IN"
+  }
+}
+</script>
+<style>
+/* ============ FONTS (embedded) ============ */
+@font-face{font-family:'Fraunces';src:url(__FONT_FRAUNCES__) format('woff2');font-weight:300 700;font-style:normal;font-display:swap}
+@font-face{font-family:'Fraunces';src:url(__FONT_FRAUNCES_IT__) format('woff2');font-weight:300 700;font-style:italic;font-display:swap}
+@font-face{font-family:'Manrope';src:url(__FONT_MANROPE__) format('woff2');font-weight:300 800;font-style:normal;font-display:swap}
+
+/* ============ TOKENS ============ */
+:root{
+  --bg:#FAF6EE;
+  --bg-2:#F1EADB;
+  --ink:#221A12;
+  --ink-soft:#6B5F51;
+  --accent:#B5501F;
+  --accent-soft:#E58B5F;
+  --green:#3E7C4F;
+  --line:rgba(34,26,18,.14);
+  --serif:'Fraunces',Georgia,'Times New Roman',serif;
+  --sans:'Manrope',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --ease:cubic-bezier(.22,.75,.2,1);
+  --shadow:0 24px 60px -18px rgba(34,26,18,.28);
+}
+
+/* ============ BASE ============ */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--ink);
+  font-family:var(--sans);font-weight:500;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+img{display:block;max-width:100%}
+a{color:inherit}
+button{font-family:inherit}
+::selection{background:var(--accent);color:var(--bg)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+section{scroll-margin-top:86px}
+.wrap{max-width:1220px;margin:0 auto;padding:0 clamp(20px,5vw,48px)}
+
+/* film grain */
+body::after{
+  content:"";position:fixed;inset:0;z-index:96;pointer-events:none;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:180px;
+}
+
+/* ============ TYPE ============ */
+h1,h2,h3{font-family:var(--serif);font-optical-sizing:auto;letter-spacing:-.015em}
+h1{font-size:clamp(2.55rem,5.4vw,4.7rem);line-height:1.05;font-weight:500}
+h2{font-size:clamp(2rem,3.8vw,3.3rem);line-height:1.1;font-weight:520}
+h1 em,h2 em{font-style:italic;font-weight:420;color:var(--accent)}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:12px;
+  font-size:.7rem;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);
+}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--accent);flex:none}
+.lead{font-size:clamp(1rem,1.35vw,1.13rem);line-height:1.8;color:var(--ink-soft);font-weight:500}
+.lead+.lead{margin-top:18px}
+.lead strong{color:var(--ink);font-weight:700}
+
+/* ============ BUTTONS / CHIPS ============ */
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:15px 27px;border-radius:999px;border:1px solid transparent;
+  font-size:.92rem;font-weight:700;letter-spacing:.02em;text-decoration:none;cursor:pointer;
+  transition:transform .35s var(--ease),background .35s,color .35s,border-color .35s,box-shadow .35s;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0)}
+.btn .arr{transition:transform .35s var(--ease)}
+.btn:hover .arr{transform:translateX(4px)}
+.btn--solid{background:var(--ink);color:var(--bg)}
+.btn--solid:hover{background:var(--accent);box-shadow:0 16px 34px -12px rgba(181,80,31,.55)}
+.btn--ghost{border-color:var(--line);color:var(--ink)}
+.btn--ghost:hover{border-color:var(--ink)}
+.chip{
+  display:inline-flex;align-items:center;gap:8px;padding:9px 15px;
+  border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.45);
+  font-size:.78rem;font-weight:700;color:var(--ink-soft);letter-spacing:.02em;white-space:nowrap;
+}
+.chip svg{width:14px;height:14px;flex:none;color:var(--accent)}
+.chip b{color:var(--ink);font-weight:800}
+
+/* ============ PROGRESS + NAV ============ */
+.pbar{position:fixed;top:0;left:0;right:0;height:2px;z-index:92;background:var(--accent);transform:scaleX(0);transform-origin:0 50%}
+.nav{position:fixed;top:0;left:0;right:0;z-index:88;border-bottom:1px solid transparent;transition:background .4s,border-color .4s,backdrop-filter .4s}
+.nav.on{
+  background:rgba(250,246,238,.84);
+  -webkit-backdrop-filter:blur(16px) saturate(1.5);backdrop-filter:blur(16px) saturate(1.5);
+  border-bottom-color:var(--line);
+}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:74px;gap:20px}
+.brand{font-family:var(--serif);font-size:clamp(1.12rem,1.6vw,1.32rem);font-weight:600;letter-spacing:-.01em;text-decoration:none;white-space:nowrap}
+.brand em{font-style:italic;color:var(--accent);font-weight:450}
+.brand .star{color:var(--accent);font-size:.8em;vertical-align:.18em}
+.nav-links{display:flex;gap:clamp(18px,2.6vw,34px);list-style:none}
+.nav-links a{
+  position:relative;text-decoration:none;font-size:.8rem;font-weight:700;letter-spacing:.05em;color:var(--ink-soft);
+  padding:6px 0;transition:color .3s;
+}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;height:1.5px;width:0;background:var(--accent);transition:width .35s var(--ease)}
+.nav-links a:hover,.nav-links a.act{color:var(--ink)}
+.nav-links a:hover::after,.nav-links a.act::after{width:100%}
+.nav-cta{display:inline-flex}
+.burger{display:none;position:relative;z-index:85;width:46px;height:46px;border:1px solid var(--line);border-radius:50%;background:var(--bg);cursor:pointer}
+.burger span{position:absolute;left:13px;right:13px;height:2px;background:var(--ink);border-radius:2px;top:19px;transition:top .35s var(--ease),rotate .35s var(--ease)}
+.burger span:last-child{top:25px}
+.burger.on span:first-child{top:22px;rotate:45deg}
+.burger.on span:last-child{top:22px;rotate:-45deg}
+
+/* mobile menu overlay */
+.menu{position:fixed;inset:0;z-index:84;background:var(--bg);display:flex;flex-direction:column;justify-content:center;padding:90px clamp(24px,8vw,60px) 40px;opacity:0;visibility:hidden;transition:opacity .45s var(--ease),visibility .45s}
+.menu.on{opacity:1;visibility:visible}
+.menu nav{display:flex;flex-direction:column;gap:6px}
+.menu nav a{
+  font-family:var(--serif);font-size:clamp(2rem,8.5vw,3rem);font-weight:500;text-decoration:none;line-height:1.35;
+  display:flex;align-items:baseline;gap:16px;
+  opacity:0;translate:0 26px;transition:opacity .5s var(--ease),translate .5s var(--ease),color .3s;
+}
+.menu.on nav a{opacity:1;translate:0 0}
+.menu nav a:nth-child(1){transition-delay:.08s}
+.menu nav a:nth-child(2){transition-delay:.14s}
+.menu nav a:nth-child(3){transition-delay:.2s}
+.menu nav a:nth-child(4){transition-delay:.26s}
+.menu nav a:nth-child(5){transition-delay:.32s}
+.menu nav a:hover{color:var(--accent)}
+.menu nav a i{font-style:normal;font-family:var(--sans);font-size:.72rem;font-weight:800;letter-spacing:.2em;color:var(--accent)}
+.menu-foot{margin-top:42px;display:flex;flex-wrap:wrap;gap:12px;opacity:0;transition:opacity .5s .4s}
+.menu.on .menu-foot{opacity:1}
+
+/* ============ REVEAL ============ */
+.rv{opacity:0;translate:0 30px;transition:opacity .9s var(--ease),translate .9s var(--ease);transition-delay:var(--d,0s)}
+.rv.on{opacity:1;translate:0 0}
+
+/* ============ PARALLAX HOOKS ============ */
+.plx{will-change:transform}
+.pwrap{position:relative;overflow:hidden}
+.pinner{position:absolute;left:0;top:-14%;width:100%;height:128%;will-change:transform}
+.pinner img{width:100%;height:100%;object-fit:cover}
+.frame{overflow:hidden;background:var(--bg-2)}
+.frame img{width:100%;height:100%;object-fit:cover}
+
+/* ============ HERO ============ */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:130px 0 90px;overflow:hidden}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.04fr .96fr;gap:clamp(36px,5vw,76px);align-items:center;width:100%}
+.hero-copy .eyebrow{margin-bottom:26px}
+.hero-copy h1{margin-bottom:26px;max-width:13ch}
+.hero-sub{max-width:50ch;margin-bottom:36px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:40px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:10px}
+.ghost-wrap{position:absolute;left:0;right:0;bottom:1vh;z-index:0;text-align:center;pointer-events:none}
+.ghost{
+  display:inline-block;font-family:var(--serif);font-weight:640;font-size:clamp(88px,15vw,215px);line-height:1;letter-spacing:.05em;
+  color:transparent;-webkit-text-stroke:1.5px rgba(34,26,18,.11);white-space:nowrap;user-select:none;
+}
+.art{position:relative;height:clamp(430px,60vh,650px);z-index:1}
+.art-main{position:absolute;top:0;right:0;width:min(74%,432px)}
+.art-main .frame{aspect-ratio:4/5;border-radius:999px 999px 26px 26px;box-shadow:var(--shadow)}
+.art-tile{position:absolute;left:4%;top:3%;width:clamp(110px,26%,168px);rotate:-5deg}
+.art-tile .frame{aspect-ratio:3/4;border-radius:16px;border:6px solid var(--bg);box-shadow:var(--shadow)}
+.art-circle{position:absolute;left:0;bottom:9%;width:clamp(132px,30%,196px)}
+.art-circle .frame{aspect-ratio:1;border-radius:50%;border:7px solid var(--bg);box-shadow:var(--shadow)}
+.badge{position:absolute;right:-10px;bottom:-4px;width:clamp(100px,23%,134px);aspect-ratio:1;z-index:3}
+.badge svg{width:100%;height:100%;animation:spin 26s linear infinite}
+.badge-core{position:absolute;inset:0;display:grid;place-items:center;font-size:1.35rem;color:var(--accent)}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes floaty{from{translate:0 -7px}to{translate:0 7px}}
+.art-main .frame{animation:floaty 9s ease-in-out infinite alternate}
+.art-circle .frame{animation:floaty 7s .8s ease-in-out infinite alternate-reverse}
+.scroll-cue{
+  position:absolute;left:clamp(20px,5vw,48px);bottom:26px;z-index:3;
+  display:flex;align-items:center;gap:14px;
+  font-size:.66rem;font-weight:800;letter-spacing:.26em;text-transform:uppercase;color:var(--ink-soft);
+}
+.scroll-cue .line{width:1px;height:46px;background:var(--line);overflow:hidden;position:relative}
+.scroll-cue .line::after{content:"";position:absolute;left:0;top:-100%;width:100%;height:100%;background:var(--accent);animation:drip 2.2s var(--ease) infinite}
+@keyframes drip{0%{top:-100%}65%,100%{top:100%}}
+
+/* ============ MARQUEE ============ */
+.marquee{border-block:1px solid var(--line);padding:17px 0;overflow:hidden;background:var(--bg)}
+.mq-track{display:flex;width:max-content;animation:mq 32s linear infinite}
+.marquee:hover .mq-track{animation-play-state:paused}
+.mq-group{display:flex;align-items:center;gap:30px;padding-right:30px;flex:none}
+.mq-group span{font-size:.75rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft);white-space:nowrap}
+.mq-group .s{color:var(--accent);letter-spacing:0}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ============ SECTION HEAD ============ */
+.sec{padding:clamp(92px,13vh,150px) 0}
+.sec-head{display:grid;grid-template-columns:1fr auto;align-items:end;gap:28px;margin-bottom:clamp(44px,6vw,72px)}
+.sec-head .eyebrow{margin-bottom:20px}
+.sec-note{max-width:30ch;font-size:.95rem;line-height:1.7;color:var(--ink-soft);padding-bottom:8px}
+
+/* ============ STORY ============ */
+.story-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(44px,6vw,92px);align-items:center}
+.story-art{position:relative}
+.story-art .frame--arch{aspect-ratio:4/5;width:min(100%,464px);border-radius:999px 999px 24px 24px}
+.story-art .pwrap{border-radius:999px 999px 24px 24px}
+.story-art .frame--arch .pinner img{animation:none}
+.story-badge{position:absolute;right:-4%;bottom:-7%;width:clamp(126px,32%,188px)}
+.story-badge .frame{aspect-ratio:1;border-radius:50%;border:7px solid var(--bg);box-shadow:var(--shadow)}
+.story-copy h2{margin:22px 0 26px;max-width:15ch}
+.sig{display:block;margin-top:22px;font-family:var(--serif);font-style:italic;font-size:1.3rem;color:var(--accent)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:32px 0 40px}
+.stats{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:clamp(26px,4vw,54px);border-top:1px solid var(--line);padding-top:30px}
+.stat .num{font-family:var(--serif);font-size:clamp(2rem,3.2vw,2.7rem);font-weight:560;line-height:1}
+.stat .num .of{font-size:1.05rem;color:var(--ink-soft);font-weight:450;margin-left:2px}
+.stat .lbl{font-size:.72rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--ink);margin-top:10px}
+.stat .sub{font-size:.78rem;color:var(--ink-soft);margin-top:3px}
+
+/* ============ SPACES ============ */
+.spaces{background:var(--bg-2)}
+.spaces-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,64px)}
+.space{position:relative}
+.space:nth-child(even){margin-top:64px}
+.space .pwrap{border-radius:24px;background:var(--bg)}
+.space .pwrap--tall{aspect-ratio:3/4}
+.space .pwrap--wide{aspect-ratio:4/3}
+.space .pinner img{transition:transform .9s var(--ease)}
+.space:hover .pinner img{transform:scale(1.06)}
+.space-go{
+  position:absolute;top:16px;right:16px;width:46px;height:46px;border-radius:50%;
+  background:var(--bg);color:var(--ink);display:grid;place-items:center;
+  opacity:0;translate:0 10px;transition:opacity .4s var(--ease),translate .4s var(--ease);
+}
+.space:hover .space-go{opacity:1;translate:0 0}
+.space-no{font-size:.72rem;font-weight:800;letter-spacing:.22em;color:var(--accent)}
+.space-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin:24px 0 12px}
+.space-head h3{font-size:clamp(1.45rem,2.1vw,1.85rem);font-weight:540;transition:color .3s}
+.space:hover .space-head h3{color:var(--accent)}
+.space p{color:var(--ink-soft);line-height:1.75;max-width:46ch;font-size:.98rem}
+.space .chip{margin-top:16px;background:transparent}
+
+/* ============ PLATE ============ */
+.plate-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(28px,4vw,60px);text-align:center;align-items:start}
+.plate-item:nth-child(2){margin-top:46px}
+.plate-item .frame{width:min(100%,378px);aspect-ratio:1;border-radius:50%;margin:0 auto;border:8px solid var(--bg-2);box-shadow:var(--shadow)}
+.plate-item img{transition:transform .9s var(--ease)}
+.plate-item:hover img{transform:scale(1.07) rotate(2deg)}
+.plate-item h3{font-size:clamp(1.35rem,1.9vw,1.7rem);font-weight:540;margin:28px 0 10px}
+.plate-item p{color:var(--ink-soft);font-size:.95rem;line-height:1.7;max-width:30ch;margin:0 auto}
+.mocha{
+  margin-top:clamp(64px,9vw,104px);background:var(--ink);color:var(--bg);
+  border-radius:30px;padding:clamp(30px,4.5vw,56px);
+  display:grid;grid-template-columns:auto 1fr auto;gap:clamp(22px,3.4vw,48px);align-items:center;
+  position:relative;overflow:hidden;
+}
+.mocha::before{content:"";position:absolute;right:-90px;top:-90px;width:280px;height:280px;border-radius:50%;background:var(--accent);opacity:.22;filter:blur(70px)}
+.mocha-ic{width:66px;height:66px;border-radius:50%;background:var(--accent);display:grid;place-items:center;font-size:1.7rem;flex:none}
+.mocha h3{font-size:clamp(1.3rem,2.2vw,1.85rem);font-weight:520}
+.mocha h3 em{color:var(--accent-soft);font-style:italic;font-weight:420}
+.mocha p{color:rgba(250,246,238,.72);line-height:1.7;margin-top:8px;max-width:58ch}
+.mocha cite{display:block;font-style:normal;font-size:.78rem;letter-spacing:.08em;color:rgba(250,246,238,.5);margin-top:12px}
+.btn--light{border-color:rgba(250,246,238,.3);color:var(--bg)}
+.btn--light:hover{background:var(--accent);border-color:var(--accent)}
+
+/* ============ REVIEWS ============ */
+.reviews{background:var(--bg-2)}
+.rev-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:clamp(44px,6vw,90px);align-items:start}
+.rev-grid h2{margin:22px 0 18px;max-width:14ch}
+.platforms{display:grid;gap:14px;margin-top:34px}
+.plat{
+  display:grid;grid-template-columns:1fr auto;align-items:center;gap:6px 18px;
+  border:1px solid var(--line);border-radius:20px;padding:18px 24px;background:rgba(250,246,238,.65);
+  transition:translate .4s var(--ease),box-shadow .4s var(--ease);
+}
+.plat:hover{translate:0 -4px;box-shadow:var(--shadow)}
+.plat .p-name{font-weight:800;font-size:.88rem;letter-spacing:.06em}
+.plat .p-count{font-size:.76rem;color:var(--ink-soft);grid-column:1}
+.plat .p-score{grid-row:1 / span 2;font-family:var(--serif);font-size:1.9rem;font-weight:560;line-height:1}
+.stars{position:relative;display:inline-block;font-size:.88rem;letter-spacing:3px;color:rgba(34,26,18,.16);line-height:1;margin-top:6px}
+.stars .s-fill{position:absolute;left:0;top:0;overflow:hidden;white-space:nowrap;width:calc(var(--r)/5*100%);color:var(--accent)}
+.g-link{display:inline-flex;align-items:center;gap:8px;margin-top:26px;font-size:.85rem;font-weight:800;color:var(--accent);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .3s}
+.g-link:hover{border-bottom-color:var(--accent)}
+.g-link .arr{transition:transform .3s}
+.g-link:hover .arr{transform:translate(3px,-3px)}
+.carousel{position:relative;background:var(--bg);border:1px solid var(--line);border-radius:30px;padding:clamp(30px,4vw,54px);min-height:340px;display:flex;flex-direction:column;justify-content:space-between}
+.q-mark{font-family:var(--serif);font-size:5.5rem;line-height:.6;color:var(--accent);opacity:.3;height:34px}
+.slide{display:none}
+.slide.on{display:block;animation:fadeUp .6s var(--ease)}
+@keyframes fadeUp{from{opacity:0;translate:0 18px}to{opacity:1;translate:0 0}}
+.slide blockquote{font-family:var(--serif);font-style:italic;font-size:clamp(1.3rem,2.1vw,1.72rem);line-height:1.55;font-weight:420;margin:18px 0 30px}
+.q-who{display:flex;align-items:center;gap:14px}
+.q-ava{width:46px;height:46px;border-radius:50%;background:var(--bg-2);border:1px solid var(--line);display:grid;place-items:center;font-family:var(--serif);font-weight:600;color:var(--accent);font-size:1.05rem;flex:none}
+.q-name{font-weight:800;font-size:.92rem}
+.q-src{font-size:.74rem;color:var(--ink-soft);margin-top:2px}
+.controls{display:flex;align-items:center;justify-content:space-between;margin-top:38px}
+.dots{display:flex;gap:9px}
+.dot-i{width:8px;height:8px;border-radius:99px;border:0;background:rgba(34,26,18,.18);cursor:pointer;padding:0;transition:background .3s,width .3s,translate .3s}
+.dot-i.on{background:var(--accent);width:26px}
+.cbtns{display:flex;gap:10px}
+.cbtn{width:52px;height:52px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--ink);display:grid;place-items:center;cursor:pointer;transition:background .35s,color .35s,border-color .35s,transform .35s var(--ease)}
+.cbtn:hover{background:var(--ink);color:var(--bg);border-color:var(--ink);transform:translateY(-2px)}
+
+/* ============ VISIT ============ */
+.visit-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:16px}
+.vcard{border:1px solid var(--line);border-radius:24px;padding:30px 28px;background:rgba(255,255,255,.5);transition:translate .4s var(--ease),box-shadow .4s var(--ease)}
+.vcard:hover{translate:0 -5px;box-shadow:var(--shadow)}
+.v-ic{width:44px;height:44px;border-radius:50%;background:var(--bg-2);display:grid;place-items:center;color:var(--accent);margin-bottom:20px}
+.v-ic svg{width:20px;height:20px}
+.v-lbl{font-size:.7rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft)}
+.v-big{font-family:var(--serif);font-size:clamp(1.2rem,1.7vw,1.5rem);font-weight:540;line-height:1.4;margin:12px 0 8px}
+.vcard p,.vcard address{font-style:normal;font-size:.9rem;color:var(--ink-soft);line-height:1.7}
+.v-link{display:inline-flex;align-items:center;gap:7px;margin-top:14px;color:var(--accent);font-weight:800;font-size:.85rem;text-decoration:none;border-bottom:1px solid transparent;transition:border-color .3s}
+.v-link:hover{border-bottom-color:var(--accent)}
+.v-link .arr{transition:transform .3s}
+.v-link:hover .arr{transform:translate(3px,-3px)}
+.live{display:inline-flex;align-items:center;gap:9px;font-size:.82rem;font-weight:800;color:var(--green)}
+.live i{width:9px;height:9px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(62,124,79,.4)}70%{box-shadow:0 0 0 9px rgba(62,124,79,0)}100%{box-shadow:0 0 0 0 rgba(62,124,79,0)}}
+.reserve{
+  margin-top:clamp(56px,8vw,90px);position:relative;overflow:hidden;
+  background:var(--ink);color:var(--bg);border-radius:34px;
+  padding:clamp(40px,6vw,76px);
+  display:grid;grid-template-columns:1.2fr auto;gap:clamp(30px,4vw,60px);align-items:center;
+}
+.reserve::before{content:"";position:absolute;right:-120px;bottom:-140px;width:340px;height:340px;border-radius:50%;background:var(--accent);opacity:.2;filter:blur(80px)}
+.reserve::after{content:"✦";position:absolute;right:clamp(24px,5vw,64px);top:clamp(20px,4vw,48px);color:var(--accent-soft);font-size:1.3rem;opacity:.6}
+.reserve h2{margin:20px 0 16px}
+.reserve h2 em{color:var(--accent-soft)}
+.reserve p{color:rgba(250,246,238,.72);line-height:1.75;max-width:46ch}
+.partner-lbl{font-size:.68rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:rgba(250,246,238,.55);margin-bottom:16px}
+.partner-btns{display:flex;flex-wrap:wrap;gap:12px}
+.pbtn{
+  display:inline-flex;align-items:center;gap:9px;padding:13px 22px;border-radius:999px;
+  border:1px solid rgba(250,246,238,.28);color:var(--bg);font-weight:800;font-size:.88rem;text-decoration:none;
+  transition:background .35s,border-color .35s,transform .35s var(--ease);
+}
+.pbtn:hover{background:var(--accent);border-color:var(--accent);transform:translateY(-2px)}
+.pbtn .arr{transition:transform .3s}
+.pbtn:hover .arr{transform:translate(3px,-3px)}
+.reserve-call{margin-top:20px;font-size:.85rem;color:rgba(250,246,238,.6)}
+.reserve-call a{color:var(--bg);font-weight:800;text-decoration:none;border-bottom:1px solid rgba(250,246,238,.35)}
+
+/* ============ FOOTER ============ */
+.footer{background:var(--ink);color:rgba(250,246,238,.78);padding:clamp(64px,9vw,110px) 0 36px}
+.f-word{font-family:var(--serif);font-weight:540;font-size:clamp(2.3rem,6.2vw,4.7rem);line-height:1.04;letter-spacing:-.015em;color:var(--bg)}
+.f-word em{font-style:italic;font-weight:420;color:var(--accent-soft)}
+.f-tag{margin-top:18px;font-size:.78rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(250,246,238,.5)}
+.f-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:clamp(28px,4vw,56px);margin:clamp(46px,6vw,70px) 0;border-top:1px solid rgba(250,246,238,.14);padding-top:clamp(36px,5vw,54px)}
+.f-col p{font-size:.9rem;line-height:1.85;color:rgba(250,246,238,.6)}
+.f-col a{color:rgba(250,246,238,.78);text-decoration:none;font-size:.9rem;display:inline-block;padding:4px 0;transition:color .3s,translate .3s var(--ease)}
+.f-col a:hover{color:var(--accent-soft);translate:3px 0}
+.f-col h4{font-size:.68rem;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:rgba(250,246,238,.45);margin-bottom:16px}
+.f-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;border-top:1px solid rgba(250,246,238,.14);padding-top:26px;font-size:.78rem;color:rgba(250,246,238,.48)}
+
+/* ============ TOAST / TOP ============ */
+.toast{
+  position:fixed;left:50%;bottom:30px;z-index:99;translate:-50% 20px;
+  display:flex;align-items:center;gap:10px;padding:14px 24px;border-radius:999px;
+  background:var(--ink);color:var(--bg);font-size:.85rem;font-weight:700;letter-spacing:.02em;
+  box-shadow:0 20px 50px -12px rgba(34,26,18,.5);opacity:0;pointer-events:none;
+  transition:opacity .4s var(--ease),translate .4s var(--ease);max-width:calc(100vw - 40px);
+}
+.toast.on{opacity:1;translate:-50% 0}
+.toast .ic{color:var(--accent-soft)}
+.top-btn{
+  position:fixed;right:22px;bottom:22px;z-index:70;width:50px;height:50px;border-radius:50%;border:0;cursor:pointer;
+  background:var(--ink);color:var(--bg);display:grid;place-items:center;box-shadow:0 14px 34px -10px rgba(34,26,18,.45);
+  opacity:0;translate:0 14px;pointer-events:none;transition:opacity .4s,translate .4s var(--ease),background .3s;
+}
+.top-btn.on{opacity:1;translate:0 0;pointer-events:auto}
+.top-btn:hover{background:var(--accent)}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:1020px){
+  .art{height:clamp(400px,52vh,560px)}
+}
+@media (max-width:900px){
+  .nav-links,.nav-cta{display:none}
+  .burger{display:block}
+  .hero{padding:112px 0 70px;min-height:auto}
+  .hero-grid{grid-template-columns:1fr;gap:56px}
+  .hero-copy h1{max-width:16ch}
+  .art{height:min(84vw,540px)}
+  .art-tile{display:none}
+  .art-main{width:86%}
+  .art-circle{width:31%;left:0;bottom:6%}
+  .badge{right:2%;bottom:-2%}
+  .scroll-cue{display:none}
+  .story-grid,.rev-grid{grid-template-columns:1fr}
+  .spaces-grid{grid-template-columns:1fr}
+  .space:nth-child(even){margin-top:0}
+  .plate-grid{grid-template-columns:1fr;max-width:420px;margin:0 auto;gap:44px}
+  .plate-item:nth-child(2){margin-top:0}
+  .mocha{grid-template-columns:1fr;text-align:left}
+  .reserve{grid-template-columns:1fr}
+  .f-grid{grid-template-columns:1fr 1fr}
+  .sec-head{grid-template-columns:1fr}
+  .sec-note{padding-bottom:0}
+}
+@media (max-width:560px){
+  .stats{grid-template-columns:1fr 1fr;row-gap:28px}
+  .f-grid{grid-template-columns:1fr}
+  .hero-cta .btn{width:100%;justify-content:center}
+  .partner-btns .pbtn{flex:1 1 auto;justify-content:center}
+}
+
+/* ============ REDUCED MOTION ============ */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+  .rv{opacity:1;translate:0 0}
+  .mq-track{animation:none}
+}
+</style>
+</head>
+<body>
+
+<div class="pbar" id="pbar" aria-hidden="true"></div>
+
+<!-- ================= NAV ================= -->
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top">The Bangalore <em>Cafe</em> <span class="star">✦</span></a>
+    <nav aria-label="Primary">
+      <ul class="nav-links">
+        <li><a href="#story">Story</a></li>
+        <li><a href="#spaces">Spaces</a></li>
+        <li><a href="#plate">The Plate</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#visit">Visit</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--solid nav-cta" href="#reserve">Reserve a table</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- mobile menu -->
+<div class="menu" id="menu" aria-hidden="true">
+  <nav aria-label="Mobile">
+    <a href="#story"><i>01</i> Our Story</a>
+    <a href="#spaces"><i>02</i> The Spaces</a>
+    <a href="#plate"><i>03</i> On the Plate</a>
+    <a href="#reviews"><i>04</i> Reviews</a>
+    <a href="#visit"><i>05</i> Visit Us</a>
+  </nav>
+  <div class="menu-foot">
+    <a class="btn btn--solid" href="#reserve">Reserve a table</a>
+    <a class="btn btn--ghost" href="tel:+919535964043">095359 64043</a>
+  </div>
+</div>
+
+<main id="top">
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="ghost-wrap" aria-hidden="true"><span class="ghost plx" data-plx="0.16">BENGALURU</span></div>
+
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow rv">Namaskara ✦ Pure Veg ✦ Shanti Nagar</p>
+      <h1 class="rv" style="--d:.08s">Where the <em>gallis</em> of India meet the streets of <em>Italy</em>.</h1>
+      <p class="lead hero-sub rv" style="--d:.16s">A relaxed, all-vegetarian cafe in the heart of Bengaluru — South Indian soul, North Indian comfort, and a little Italian sunshine. Chaat at the Outhouse, desserts worth the detour, and drive-in nights that feel like old-school Bangalore. <strong>Open till 1 am.</strong></p>
+      <div class="hero-cta rv" style="--d:.24s">
+        <a class="btn btn--solid" href="#reserve">Reserve a table <span class="arr">→</span></a>
+        <a class="btn btn--ghost" href="tel:+919535964043">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l1.8 4.2-2.3 1.7a12.5 12.5 0 0 0 5.6 5.6l1.7-2.3L20 15v4a1.8 1.8 0 0 1-2 1.8A16.5 16.5 0 0 1 3.2 6 1.8 1.8 0 0 1 5 4z"/></svg>
+          095359 64043
+        </a>
+      </div>
+      <div class="hero-meta rv" style="--d:.32s">
+        <span class="chip"><span style="color:var(--accent);font-weight:800">★</span> <b>4.3</b>&nbsp;on Zomato · 6,833 votes</span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg> Open daily · 12 pm – 1 am</span>
+        <span class="chip"><span style="color:var(--accent);font-weight:800">₹</span> 400–1,400 per person</span>
+      </div>
+    </div>
+
+    <div class="art" aria-label="A pure vegetarian feast at The Bangalore Cafe">
+      <figure class="art-tile plx" data-plx="0.07" data-mx="7">
+        <div class="frame"><img src="__IMG_DESSERT__" alt="Warm gulab jamun and kulfi from the dessert house" width="880" height="1173"></div>
+      </figure>
+      <figure class="art-main plx" data-plx="0.13" data-mx="-13">
+        <div class="frame"><img src="__IMG_FEAST__" alt="A South Indian feast — ghee roast dosa, idlis, vadas, chutneys and filter coffee" width="1080" height="1350"></div>
+      </figure>
+      <figure class="art-circle plx" data-plx="0.2" data-mx="16">
+        <div class="frame"><img src="__IMG_SOUTH__" alt="Ghee roast dosa with coconut chutney and filter coffee" width="900" height="900"></div>
+      </figure>
+      <div class="badge plx" data-plx="0.05" data-mx="-8" aria-hidden="true">
+        <svg viewBox="0 0 120 120">
+          <defs><path id="circ" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs>
+          <text font-family="Manrope, sans-serif" font-size="10.5" font-weight="700" letter-spacing="2.6" fill="#221A12">
+            <textPath href="#circ">PURE VEG · OPEN TILL 1 AM · SHANTI NAGAR · BENGALURU ·</textPath>
+          </text>
+        </svg>
+        <span class="badge-core">✦</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-cue" aria-hidden="true"><span class="line"></span> Scroll</div>
+</section>
+
+<!-- ================= MARQUEE ================= -->
+<div class="marquee" aria-hidden="true">
+  <div class="mq-track">
+    <div class="mq-group">
+      <span>Ghee-roast dosas</span><span class="s">✦</span>
+      <span>Chaat &amp; chai at the Outhouse</span><span class="s">✦</span>
+      <span>North Indian curries</span><span class="s">✦</span>
+      <span>Wood-fired pizza</span><span class="s">✦</span>
+      <span>Pastas</span><span class="s">✦</span>
+      <span>Mexican</span><span class="s">✦</span>
+      <span>Chinese</span><span class="s">✦</span>
+      <span>Japanese Blue Mocha</span><span class="s">✦</span>
+      <span>Dessert house</span><span class="s">✦</span>
+      <span>Drive-in dining</span><span class="s">✦</span>
+      <span>Banquet hall</span><span class="s">✦</span>
+    </div>
+    <div class="mq-group">
+      <span>Ghee-roast dosas</span><span class="s">✦</span>
+      <span>Chaat &amp; chai at the Outhouse</span><span class="s">✦</span>
+      <span>North Indian curries</span><span class="s">✦</span>
+      <span>Wood-fired pizza</span><span class="s">✦</span>
+      <span>Pastas</span><span class="s">✦</span>
+      <span>Mexican</span><span class="s">✦</span>
+      <span>Chinese</span><span class="s">✦</span>
+      <span>Japanese Blue Mocha</span><span class="s">✦</span>
+      <span>Dessert house</span><span class="s">✦</span>
+      <span>Drive-in dining</span><span class="s">✦</span>
+      <span>Banquet hall</span><span class="s">✦</span>
+    </div>
+  </div>
+</div>
+
+<!-- ================= STORY ================= -->
+<section class="sec" id="story">
+  <div class="wrap story-grid">
+    <div class="story-art">
+      <figure class="pwrap rv">
+        <div class="pinner plx" data-plx="0.06"><img src="__IMG_INTERIOR__" alt="Warm, plant-filled interior of The Bangalore Cafe" width="1000" height="1250"></div>
+      </figure>
+      <figure class="story-badge plx rv" data-plx="0.12" data-mx="-9" style="--d:.15s">
+        <div class="frame"><img src="__IMG_FEAST__" alt="Vegetarian thali at The Bangalore Cafe" width="500" height="500"></div>
+      </figure>
+    </div>
+
+    <div class="story-copy">
+      <p class="eyebrow rv">01 · Our Story</p>
+      <h2 class="rv" style="--d:.08s">A pure-veg <em>love letter</em> to Bangalore.</h2>
+      <p class="lead rv" style="--d:.14s">We are The Bangalore Cafe — a pure vegetarian restaurant dishing out a mix of authentic and experimental cuisine from across the globe. From the gallis of India to the streets of Italy, our kitchens roam across <strong>North Indian, Chinese, Mexican and Italian</strong>.</p>
+      <p class="lead rv" style="--d:.2s">There's an <strong>Outhouse</strong> for quick bites — chaats and amazing tea and coffee — a <strong>Dessert House</strong> for every sweet craving, a <strong>Drive-In</strong> for a feel of old-school Bangalore, and a massive <strong>Banquet Hall</strong> to host the most important days of your life.</p>
+      <span class="sig rv" style="--d:.26s">What more could one want?</span>
+
+      <div class="chips rv" style="--d:.3s">
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg> All you can eat</span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg> Outdoor seating</span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg> Private dining room</span>
+      </div>
+
+      <div class="stats rv" style="--d:.34s">
+        <div class="stat">
+          <div class="num"><span data-count="4.3" data-dec="1">0</span><span class="of">/5</span></div>
+          <div class="lbl">Zomato</div>
+          <div class="sub">6,833 diners voted</div>
+        </div>
+        <div class="stat">
+          <div class="num"><span data-count="4.4" data-dec="1">0</span><span class="of">/5</span></div>
+          <div class="lbl">Swiggy</div>
+          <div class="sub">3,000 reviews</div>
+        </div>
+        <div class="stat">
+          <div class="num"><span data-count="4.6" data-dec="1">0</span><span class="of">/5</span></div>
+          <div class="lbl">Facebook</div>
+          <div class="sub">30 votes</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SPACES ================= -->
+<section class="sec spaces" id="spaces">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow rv">02 · The Spaces</p>
+        <h2 class="rv" style="--d:.08s">One cafe, <em>many moods</em>.</h2>
+      </div>
+      <p class="sec-note rv" style="--d:.14s">Four spaces under one roof — each with its own flavour of Bangalore.</p>
+    </div>
+
+    <div class="spaces-grid">
+      <article class="space rv">
+        <div class="pwrap pwrap--tall">
+          <div class="pinner plx" data-plx="0.055"><img src="__IMG_OUTHOUSE__" alt="Pani puri and cutting chai at the Outhouse" width="880" height="1173"></div>
+          <span class="space-go" aria-hidden="true">→</span>
+        </div>
+        <div class="space-head"><h3>The Outhouse</h3><span class="space-no">01</span></div>
+        <p>Quick bites done right — street-style chaats with a proper cup of chai or a slow-brewed filter coffee.</p>
+        <span class="chip">Chaat · Chai · Coffee</span>
+      </article>
+
+      <article class="space rv" style="--d:.1s">
+        <div class="pwrap pwrap--tall">
+          <div class="pinner plx" data-plx="0.055"><img src="__IMG_DESSERT__" alt="Gulab jamun, kulfi and kesari from the Dessert House" width="880" height="1173"></div>
+          <span class="space-go" aria-hidden="true">→</span>
+        </div>
+        <div class="space-head"><h3>The Dessert House</h3><span class="space-no">02</span></div>
+        <p>A little house of sweets for every craving — warm gulab jamun, slow-churned kulfi, and everything in between.</p>
+        <span class="chip">Mithai &amp; more</span>
+      </article>
+
+      <article class="space rv">
+        <div class="pwrap pwrap--wide">
+          <div class="pinner plx" data-plx="0.055"><img src="__IMG_DRIVEIN__" alt="Vintage car dining under fairy lights at the drive-in" width="1160" height="870"></div>
+          <span class="space-go" aria-hidden="true">→</span>
+        </div>
+        <div class="space-head"><h3>The Drive-In</h3><span class="space-no">03</span></div>
+        <p>Park up, roll the windows down, and dine under the stars — pure old-school Bangalore.</p>
+        <span class="chip">Late nights · Open till 1 am</span>
+      </article>
+
+      <article class="space rv" style="--d:.1s">
+        <div class="pwrap pwrap--wide">
+          <div class="pinner plx" data-plx="0.055"><img src="__IMG_BANQUET__" alt="Elegant banquet hall set for a celebration" width="1160" height="870"></div>
+          <span class="space-go" aria-hidden="true">→</span>
+        </div>
+        <div class="space-head"><h3>The Banquet Hall</h3><span class="space-no">04</span></div>
+        <p>A warm, generous hall for the biggest days of your life — and the feasts that come with them.</p>
+        <span class="chip">Private events</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PLATE ================= -->
+<section class="sec" id="plate">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow rv">03 · On the Plate</p>
+        <h2 class="rv" style="--d:.08s">South to North — and <em>a little further</em>.</h2>
+      </div>
+      <p class="sec-note rv" style="--d:.14s">One pure-veg kitchen, roaming happily across cuisines.</p>
+    </div>
+
+    <div class="plate-grid">
+      <div class="plate-item rv">
+        <div class="frame"><img src="__IMG_SOUTH__" alt="Ghee roast dosa with chutney and filter coffee" width="900" height="900"></div>
+        <h3>The South</h3>
+        <p>Crisp ghee-roast dosas, soft idlis, vadas, and slow-brewed filter kaapi.</p>
+      </div>
+      <div class="plate-item rv" style="--d:.12s">
+        <div class="frame"><img src="__IMG_NORTH__" alt="Dal makhani, paneer butter masala and butter naan" width="900" height="900"></div>
+        <h3>The North</h3>
+        <p>Dal makhani, paneer butter masala, and naan straight off the tandoor.</p>
+      </div>
+      <div class="plate-item rv" style="--d:.24s">
+        <div class="frame"><img src="__IMG_CONTINENTAL__" alt="Wood-fired margherita pizza and penne pasta" width="900" height="900"></div>
+        <h3>The West</h3>
+        <p>Wood-fired pizza, pastas, and continental classics — plus Mexican and Chinese.</p>
+      </div>
+    </div>
+
+    <div class="mocha rv">
+      <div class="mocha-ic" aria-hidden="true">☕</div>
+      <div>
+        <h3>The cult favourite — the <em>Japanese Blue Mocha</em>.</h3>
+        <p>For people who like their coffee a little stronger. Order it once, and you'll be back for it.</p>
+        <cite>— suggested by Dishari Sen, on Google Reviews</cite>
+      </div>
+      <a class="btn btn--light" href="#reviews">More reviews <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= REVIEWS ================= -->
+<section class="sec reviews" id="reviews">
+  <div class="wrap rev-grid">
+    <div>
+      <p class="eyebrow rv">04 · Word of Mouth</p>
+      <h2 class="rv" style="--d:.08s">Bengaluru keeps <em>coming back</em>.</h2>
+      <p class="lead rv" style="--d:.14s">Thousands of diners across Zomato, Swiggy and Google — and a steady 4.3-and-above everywhere.</p>
+
+      <div class="platforms">
+        <div class="plat rv" style="--d:.18s">
+          <div><div class="p-name">Zomato</div><div class="stars" style="--r:4.3"><span class="s-fill">★★★★★</span>★★★★★</div></div>
+          <div class="p-count">6,833 votes</div>
+          <div class="p-score">4.3</div>
+        </div>
+        <div class="plat rv" style="--d:.24s">
+          <div><div class="p-name">Swiggy</div><div class="stars" style="--r:4.4"><span class="s-fill">★★★★★</span>★★★★★</div></div>
+          <div class="p-count">3,000 reviews</div>
+          <div class="p-score">4.4</div>
+        </div>
+        <div class="plat rv" style="--d:.3s">
+          <div><div class="p-name">Facebook</div><div class="stars" style="--r:4.6"><span class="s-fill">★★★★★</span>★★★★★</div></div>
+          <div class="p-count">30 votes</div>
+          <div class="p-score">4.6</div>
+        </div>
+      </div>
+
+      <a class="g-link rv" style="--d:.34s" href="https://www.google.com/maps/search/The+Bangalore+Cafe,+Shanti+Nagar,+Bengaluru" target="_blank" rel="noopener">Read all Google reviews <span class="arr">↗</span></a>
+    </div>
+
+    <div class="carousel rv" id="carousel" style="--d:.15s">
+      <div>
+        <div class="q-mark" aria-hidden="true">“</div>
+        <div class="slide on">
+          <blockquote>Tasty food, good ambience, nice service — pure veg, and a great experience all round.</blockquote>
+          <div class="q-who">
+            <span class="q-ava" aria-hidden="true">H</span>
+            <span><span class="q-name">h n srikanta</span><div class="q-src">Google Reviews</div></span>
+          </div>
+        </div>
+        <div class="slide">
+          <blockquote>People who like a little stronger coffee — the Japanese Blue Mocha is the one to order.</blockquote>
+          <div class="q-who">
+            <span class="q-ava" aria-hidden="true">D</span>
+            <span><span class="q-name">Dishari Sen</span><div class="q-src">Google Reviews</div></span>
+          </div>
+        </div>
+        <div class="slide">
+          <blockquote>They also offer continental options like pizza and pasta on the menu — something for everyone.</blockquote>
+          <div class="q-who">
+            <span class="q-ava" aria-hidden="true">A</span>
+            <span><span class="q-name">Ajay Bhat</span><div class="q-src">Google Reviews</div></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <div class="dots" id="dots" role="tablist" aria-label="Choose review"></div>
+        <div class="cbtns">
+          <button class="cbtn" id="prev" aria-label="Previous review"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></button>
+          <button class="cbtn" id="next" aria-label="Next review"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VISIT ================= -->
+<section class="sec" id="visit">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow rv">05 · Visit Us</p>
+        <h2 class="rv" style="--d:.08s">Come hungry. <em>Leave happy</em>.</h2>
+      </div>
+      <p class="sec-note rv" style="--d:.14s">Walk-ins welcome all day — or book ahead in seconds.</p>
+    </div>
+
+    <div class="visit-grid">
+      <div class="vcard rv">
+        <div class="v-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.1-7-11a7 7 0 0 1 14 0c0 5.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></div>
+        <div class="v-lbl">Find us</div>
+        <div class="v-big">Shanti Nagar, Bengaluru</div>
+        <address>4, Kengal Hanumanthaiah Rd, Bheemanna Garden, Shanti Nagar, Bengaluru, Karnataka 560027</address>
+        <a class="v-link" href="https://www.google.com/maps/search/?api=1&query=The+Bangalore+Cafe,+Kengal+Hanumanthaiah+Rd,+Shanti+Nagar,+Bengaluru" target="_blank" rel="noopener">Get directions <span class="arr">↗</span></a>
+      </div>
+
+      <div class="vcard rv" style="--d:.08s">
+        <div class="v-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg></div>
+        <div class="v-lbl">Hours</div>
+        <div class="v-big">12 pm – 1 am</div>
+        <p><span class="live"><i></i> Open daily</span><br>Late dinner? You're in the right place.</p>
+      </div>
+
+      <div class="vcard rv" style="--d:.16s">
+        <div class="v-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l1.8 4.2-2.3 1.7a12.5 12.5 0 0 0 5.6 5.6l1.7-2.3L20 15v4a1.8 1.8 0 0 1-2 1.8A16.5 16.5 0 0 1 3.2 6 1.8 1.8 0 0 1 5 4z"/></svg></div>
+        <div class="v-lbl">Call us</div>
+        <div class="v-big">095359 64043</div>
+        <p>Reservations, banquet enquiries and the odd birthday request.</p>
+        <a class="v-link" href="tel:+919535964043">Call now <span class="arr">↗</span></a>
+      </div>
+
+      <div class="vcard rv" style="--d:.24s">
+        <div class="v-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="3"/><path d="M3 10.5h18M7 15h4"/></svg></div>
+        <div class="v-lbl">Typical spend</div>
+        <div class="v-big">₹400 – ₹1,400</div>
+        <p>Per person, as reported by 579 diners. All you can eat, if you're brave.</p>
+      </div>
+    </div>
+
+    <div class="reserve rv" id="reserve">
+      <div>
+        <p class="eyebrow" style="color:var(--accent-soft)">Reservations</p>
+        <h2>Hungry <em>already</em>?</h2>
+        <p>Book a table in seconds on any of your favourites — or just walk in. The coffee's hot and the dosas don't wait.</p>
+        <p class="reserve-call">Prefer to talk? Call <a href="tel:+919535964043">095359 64043</a>.</p>
+      </div>
+      <div>
+        <div class="partner-lbl">Book on</div>
+        <div class="partner-btns">
+          <a class="pbtn" href="https://district.in/" target="_blank" rel="noopener">District <span class="arr">↗</span></a>
+          <a class="pbtn" href="https://www.zomato.com/bangalore/the-bangalore-cafe-1-shanti-nagar-bangalore/book" target="_blank" rel="noopener">Zomato <span class="arr">↗</span></a>
+          <a class="pbtn" href="https://www.eazydiner.com/bengaluru/the-bangalore-cafe-shanti-nagar-central-bengaluru-662185" target="_blank" rel="noopener">EazyDiner <span class="arr">↗</span></a>
+          <a class="pbtn" href="https://www.swiggy.com/" target="_blank" rel="noopener">Swiggy <span class="arr">↗</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="wrap">
+    <p class="f-word rv">The Bangalore <em>Cafe</em></p>
+    <p class="f-tag rv" style="--d:.1s">Pure Veg · Shanti Nagar · Open till 1 am</p>
+
+    <div class="f-grid">
+      <div class="f-col">
+        <h4>Namaskara</h4>
+        <p>A pure-vegetarian restaurant blending South and North Indian flavours with a little Western sunshine — from the gallis of India to the streets of Italy.</p>
+      </div>
+      <div class="f-col">
+        <h4>Explore</h4>
+        <a href="#story">Our Story</a><br>
+        <a href="#spaces">The Spaces</a><br>
+        <a href="#plate">On the Plate</a><br>
+        <a href="#reviews">Reviews</a><br>
+        <a href="#visit">Visit Us</a>
+      </div>
+      <div class="f-col">
+        <h4>Reserve</h4>
+        <a href="https://district.in/" target="_blank" rel="noopener">District ↗</a><br>
+        <a href="https://www.zomato.com/bangalore/the-bangalore-cafe-1-shanti-nagar-bangalore/book" target="_blank" rel="noopener">Zomato ↗</a><br>
+        <a href="https://www.eazydiner.com/bengaluru/the-bangalore-cafe-shanti-nagar-central-bengaluru-662185" target="_blank" rel="noopener">EazyDiner ↗</a><br>
+        <a href="https://www.swiggy.com/" target="_blank" rel="noopener">Swiggy ↗</a>
+      </div>
+      <div class="f-col">
+        <h4>Visit</h4>
+        <p>4, Kengal Hanumanthaiah Rd, Bheemanna Garden, Shanti Nagar, Bengaluru 560027<br><br>
+        <a href="tel:+919535964043">095359 64043</a><br>
+        Open daily · 12 pm – 1 am</p>
+      </div>
+    </div>
+
+    <div class="f-bottom">
+      <span>© <span class="js-year">2026</span> The Bangalore Cafe · Shanti Nagar, Bengaluru</span>
+      <span>Made with filter coffee ☕ in Namma Bengaluru</span>
+    </div>
+  </div>
+</footer>
+
+<!-- toast + back to top -->
+<div class="toast" id="toast" role="status" aria-live="polite"><span class="ic">✦</span><span class="msg"></span></div>
+<button class="top-btn" id="topbtn" aria-label="Back to top"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<noscript><style>.rv{opacity:1!important;translate:none!important}</style></noscript>
+
+<script>
+(function () {
+  'use strict';
+  var $ = function (s, c) { return (c || document).querySelector(s); };
+  var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- footer year ---------- */
+  $$('.js-year').forEach(function (el) { el.textContent = new Date().getFullYear(); });
+
+  /* ---------- nav / progress / back-to-top ---------- */
+  var nav = $('#nav'), pbar = $('#pbar'), topbtn = $('#topbtn'), doc = document.documentElement;
+  function onScroll() {
+    var y = window.scrollY || doc.scrollTop;
+    nav.classList.toggle('on', y > 24);
+    topbtn.classList.toggle('on', y > 720);
+    var max = doc.scrollHeight - window.innerHeight;
+    pbar.style.transform = 'scaleX(' + (max > 0 ? y / max : 0) + ')';
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+  topbtn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+  });
+
+  /* ---------- mobile menu ---------- */
+  var burger = $('#burger'), menu = $('#menu');
+  function setMenu(open) {
+    burger.classList.toggle('on', open);
+    menu.classList.toggle('on', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    menu.setAttribute('aria-hidden', open ? 'false' : 'true');
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+  burger.addEventListener('click', function () { setMenu(!menu.classList.contains('on')); });
+  $$('#menu a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+  window.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+
+  /* ---------- reveal on scroll ---------- */
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  $$('.rv').forEach(function (el) { io.observe(el); });
+
+  /* ---------- scrollspy ---------- */
+  var links = $$('.nav-links a');
+  var spy = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) {
+        links.forEach(function (a) { a.classList.toggle('act', a.getAttribute('href') === '#' + e.target.id); });
+      }
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+  ['story', 'spaces', 'plate', 'reviews', 'visit'].forEach(function (id) {
+    var el = document.getElementById(id); if (el) spy.observe(el);
+  });
+
+  /* ---------- count-up stats ---------- */
+  var cio = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      cio.unobserve(e.target);
+      var el = e.target, end = parseFloat(el.dataset.count), dec = parseInt(el.dataset.dec || '0', 10);
+      if (reduceMotion) { el.textContent = end.toFixed(dec); return; }
+      var t0 = null, dur = 1600;
+      function tick(t) {
+        if (!t0) t0 = t;
+        var p = Math.min(1, (t - t0) / dur);
+        var eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = (end * eased).toFixed(dec);
+        if (p < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    });
+  }, { threshold: 0.6 });
+  $$('[data-count]').forEach(function (el) { cio.observe(el); });
+
+  /* ---------- parallax (scroll + mouse) ---------- */
+  var plxEls = $$('[data-plx],[data-mx]').map(function (el) {
+    return { el: el, s: parseFloat(el.dataset.plx || '0'), m: parseFloat(el.dataset.mx || '0'), lastY: 0 };
+  });
+  if (plxEls.length && !reduceMotion) {
+    var mxX = 0, mxY = 0, tx = 0, ty = 0;
+    if (plxEls.some(function (p) { return p.m !== 0; }) && window.matchMedia('(pointer: fine)').matches) {
+      window.addEventListener('mousemove', function (e) {
+        tx = e.clientX / window.innerWidth - 0.5;
+        ty = e.clientY / window.innerHeight - 0.5;
+      }, { passive: true });
+    }
+    (function loop() {
+      mxX += (tx - mxX) * 0.06;
+      mxY += (ty - mxY) * 0.06;
+      var vh = window.innerHeight;
+      plxEls.forEach(function (p) {
+        var r = p.el.getBoundingClientRect();
+        if (r.bottom < -140 || r.top > vh + 140) return; /* skip offscreen */
+        var baseMid = r.top + r.height / 2 - vh / 2 - p.lastY;
+        var py = baseMid * p.s;
+        var ox = mxX * p.m;
+        var oy = mxY * p.m * 0.6;
+        p.el.style.transform = 'translate3d(' + ox.toFixed(1) + 'px,' + (py + oy).toFixed(1) + 'px,0)';
+        p.lastY = py + oy;
+      });
+      requestAnimationFrame(loop);
+    })();
+  }
+
+  /* ---------- review carousel ---------- */
+  var slides = $$('.slide'), dotsBox = $('#dots'), cur = 0, timer = null;
+  var dots = slides.map(function (_, i) {
+    var b = document.createElement('button');
+    b.className = 'dot-i' + (i === 0 ? ' on' : '');
+    b.setAttribute('aria-label', 'Review ' + (i + 1));
+    b.addEventListener('click', function () { go(i); });
+    dotsBox.appendChild(b);
+    return b;
+  });
+  function show(i) {
+    slides[cur].classList.remove('on'); dots[cur].classList.remove('on');
+    cur = (i + slides.length) % slides.length;
+    slides[cur].classList.add('on'); dots[cur].classList.add('on');
+  }
+  function go(i) { show(i); restart(); }
+  function start() { if (!reduceMotion) timer = window.setInterval(function () { show(cur + 1); }, 6500); }
+  function stop() { window.clearInterval(timer); timer = null; }
+  function restart() { stop(); start(); }
+  $('#prev').addEventListener('click', function () { go(cur - 1); });
+  $('#next').addEventListener('click', function () { go(cur + 1); });
+  var car = $('#carousel');
+  car.addEventListener('mouseenter', stop);
+  car.addEventListener('mouseleave', start);
+  var tX = null;
+  car.addEventListener('touchstart', function (e) { tX = e.touches[0].clientX; }, { passive: true });
+  car.addEventListener('touchend', function (e) {
+    if (tX === null) return;
+    var dx = e.changedTouches[0].clientX - tX;
+    if (dx > 42) go(cur - 1); else if (dx < -42) go(cur + 1);
+    tX = null;
+  }, { passive: true });
+  start();
+
+  /* ---------- right-click & devtools guard ---------- */
+  var toastEl = $('#toast'), toastMsg = $('.msg', toastEl), tTimer = null;
+  function toast(msg) {
+    toastMsg.textContent = msg;
+    toastEl.classList.add('on');
+    window.clearTimeout(tTimer);
+    tTimer = window.setTimeout(function () { toastEl.classList.remove('on'); }, 2200);
+  }
+  document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+    toast('Right-click is disabled — content protected ✦');
+  });
+  document.addEventListener('dragstart', function (e) {
+    if (e.target && e.target.tagName === 'IMG') e.preventDefault();
+  });
+  document.addEventListener('keydown', function (e) {
+    var k = (e.key || '').toUpperCase();
+    var devtools =
+      e.key === 'F12' ||
+      ((e.ctrlKey || e.metaKey) && e.shiftKey && (k === 'I' || k === 'J' || k === 'C')) ||
+      ((e.ctrlKey || e.metaKey) && k === 'U') ||
+      (e.metaKey && e.altKey && (k === 'I' || k === 'J' || k === 'C'));
+    if (devtools) {
+      e.preventDefault();
+      toast('DevTools shortcuts are disabled on this page 🔒');
+    }
+  });
+})();
+</script>
+</body>
+</html>
